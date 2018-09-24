@@ -4,14 +4,14 @@ MAINTAINER Zohar Nyego <zoharngo@gmail.com>
 # Prevent dpkg errors
 ENV TERM=xterm-256color
 
-# Set mirrors to NZ
-RUN sed -i "s/http:\/\/archive./http:\/\/nz.archive./g" /etc/apt/sources.list
+# Set mirrors to IL
+RUN sed -i "s/http:\/\/archive./http:\/\/il.archive./g" /etc/apt/sources.list
 
 # Install Python runtime env
 RUN apt-get update && \
     apt-get install -y \
     -o APT::Install-Recommend=false -o APT::Install-Suggests=false \
-    python python-virtualenv 
+    python python-virtualenv libpython2.7 python-mysqldb uwsgi-plugin-python
 
 # Create virtual enviroment 
 
