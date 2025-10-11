@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:24.04
 MAINTAINER Zohar Nyego <zoharngo@gmail.com>
 
 # Prevent dpkg errors
